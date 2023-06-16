@@ -3,7 +3,9 @@
 #include <time.h>
 
 /*
- * main - Program that assigns a random number to the variable n
+ * main - Entry point
+ *
+ * Description: Program that assigns a random number to the variable n
  *
  * Return: Always 0 (Success)
  */
