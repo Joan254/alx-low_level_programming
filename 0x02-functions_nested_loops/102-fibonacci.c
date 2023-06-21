@@ -6,33 +6,27 @@
   * Return: Always 0 (Success)
   */
 
-void fibonacci_sequence(int n)
+int main(void)
 {
-	int a;
-	int sequence[n];
-	sequence[0] = 1;
-	sequence[1] = 2;
+	int a = 0;
+	long b = 1, c = 2;
 
-	for (a = 2; a < n; a++)
+	while (a < 50)
 	{
-		sequence[a] = sequence[a-1] + sequence[a-2];
-	}
-
-	for (a = 0; a < n; a++)
-	{
-		printf("%d", sequence[a]);
-
-		if (a != n-1)
+		if (a == 0)
+			printf("%ld", b);
+		else if (a == 1)
+			printf(", %ld", c);
+		else
 		{
-			printf(", ");
+			c += b;
+			b = c - b;
+			printf(", %ld", c);
 		}
+
+		++a;
 	}
+
 	printf("\n");
-}
-
-int main()
-{
-	fibonacci_sequence(50);
-
 	return (0);
 }
