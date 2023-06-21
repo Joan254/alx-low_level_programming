@@ -8,25 +8,23 @@
 
 int main(void)
 {
-	int a = 0;
-	unsigned long b = 1, c = 2;
+	int a;
+	unsigned int b, c, next;
 
-	while (a < 98)
+	b = 1;
+	c = 2;
+
+	printf("%u, %u", b, c);
+
+	for (a = 3; a <= 98; a++)
 	{
-		if (a == 0)
-			printf("%lu", b);
-		else if (a == 1)
-			printf(", %lu", c);
-		else
-		{
-			c += b;
-			b = c - b;
-			printf(", %lu", c);
-		}
+		next = b + c;
+		printf(", %u", next);
 
-		++a;
+		b = c;
+		c = next;
+
 	}
-
 	printf("\n");
 	return (0);
 }
