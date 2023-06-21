@@ -23,31 +23,35 @@ void print_times_table(int n)
 
 			if (product <= 9)
 			{
-				if (b > 0)
-				{
-					_putchar(' ');
-				}
-				_putchar(product + '0');
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(product + '0');	
 			}
 			else if (product <= 99)
 			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 				_putchar((product / 10) + '0');
 				_putchar((product % 10) + '0');
 			}
 			else
 			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar((product / 100) + '0');
 				_putchar(((product / 10) % 10) + '0');
 				_putchar((product % 10) + '0');
 			}
-
 			if (b < n)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-
+				continue;
 			}
+			else
+				break;
+
 		}
 		_putchar('\n');
 	}
