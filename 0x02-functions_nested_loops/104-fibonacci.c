@@ -9,17 +9,17 @@
 int main(void)
 {
 	int a;
-	unsigned int b, c, next;
+	unsigned long b, c, next;
 
 	b = 1;
 	c = 2;
 
-	printf("%u, %u", b, c);
+	printf("%lu, %lu", b, c);
 
 	for (a = 3; a <= 98; a++)
 	{
 		next = b + c;
-		printf(", %u", next);
+		printf(", %lu", next);
 
 		b = c;
 		c = next;
