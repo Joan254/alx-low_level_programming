@@ -50,10 +50,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			sum += n1[a--] - '0';
 		if (b >= 0)
 			sum += n2[b--] - '0';
-		if (a < 0 && b < 0 && sum == 0)
-		{
-			break;
-		}
 
 		carry = sum / 10;
 		r[c++] = sum % 10 + '0';
