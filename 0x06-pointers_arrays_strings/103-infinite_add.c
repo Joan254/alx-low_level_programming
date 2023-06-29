@@ -58,8 +58,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		carry = sum / 10;
 		r[c++] = sum % 10 + '0';
 	}
-
-	r[c] = '\0';
 	
 	for (a = 0, b = c - 1; a < b; a++, b--)
 	{
@@ -70,6 +68,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[b] = temp;
 
 	}
+	r[c] = '\0';
 
 	return (r);
 }
