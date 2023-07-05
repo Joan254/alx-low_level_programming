@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _prime - finds if a number is prime
+ * _prime - checks if a number is prime
  * @n: the number
  * @a: iterator
  *
