@@ -25,11 +25,13 @@ size_t free_listint_safe(listint_t **h)
 		if (diff > 0)
 		{
 			temp_ptr = (*h)->next;
+			free(*h);
 			*h = temp_ptr;
 			count++;
 		}
 		else
 		{
+			free(*h);
 			*h = NULL;
 			count++;
 			break;
