@@ -5,7 +5,8 @@
  * @head: pointer to the head of the list
  * @index: the index of the node, starting from 0
  *
- * Return: the nth node of a dlistint_t linked list or NULL if the node doesn't exist
+ * Return: the nth node of a dlistint_t linked list or
+ * NULL if the node doesn't exist
  */
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
